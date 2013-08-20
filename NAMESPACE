@@ -1,0 +1,4 @@
+export("linprog")
+export("linprog.Rglpk")
+export("quadprog")
+export("quadprog.quadprog")

@@ -1,0 +1,14 @@
+Package: modopt.matlab
+Type: Package
+Title: MatLab(R)-style Modeling of Optimization Problems with R
+Version: 0.1-0
+Date: 2013-06-16
+Author: Ronald Hochreiter <ron@hochreiter.net>
+Maintainer: Ronald Hochreiter <ron@hochreiter.net>
+Description: MatLab(R)-style Modeling of Optimization Problems with R
+Depends:
+    R (>= 3.0),
+    Rglpk,
+    quadprog
+License: GPL-2
+URL: http://www.modopt.com/
