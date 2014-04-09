@@ -1,3 +1,5 @@
+export("linear.constraint.eq")
+export("linear.constraint.iq")
 export("linprog")
 export("linprog.Rglpk")
 export("quadprog")

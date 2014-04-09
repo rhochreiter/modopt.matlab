@@ -1,0 +1,7 @@
+v0.1-1 [140409]
+
+- Added linear.constraint.eq() and linear.constraint.iq() from scenportopt
+
+v0.1-0 [130616]
+
+- Initial public version, providing MatLab Optimization Toolbox equivalents
