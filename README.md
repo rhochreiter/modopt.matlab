@@ -2,14 +2,12 @@
 
 Modeling Optimization Problems with R - MatLab(R) compatibility functions.
 
-For more information, please visit [modopt.com](http://www.modopt.com/)
-
 ### Install modopt.matlab
 
     # install package "devtools" if not done yet
     if(!("devtools" %in% rownames(installed.packages()))) { install.packages("devtools") }
 
     # install modopt.matlab
-    require("devtools")
-    install_github("modopt.matlab", user="rhochreiter")
-    require("modopt.matlab")
+    library("devtools")
+    install_github("rhochreiter/modopt.matlab")
+    library("modopt.matlab")
