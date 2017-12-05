@@ -28,7 +28,7 @@ linprog(f, A = NULL, b = NULL, Aeq = NULL, beq = NULL, lb = NULL,
 }
 \value{
 The solution vector in \code{x} as well as the objective value
-in \code{fval}
+in \code{fval}.
 }
 \description{
 \code{linprog} provides a simple interface to ROI using the optimization
@@ -41,10 +41,11 @@ x >= lb
 x <= ub
 }
 \examples{
-# maximize: 2*x1 + x2;
-# subject to: x1 + x2 <= 5;
-# subject to: x1 <= 3;
-# x1 >= 0, x2 >= 0
+# maximize: 2x1 + x2
+# subject to: 
+#   x1 + x2 <= 5
+#   x1 <= 3
+#   x1 >= 0, x2 >= 0
 
 f <- c(2, 1)
 A <- matrix(c(1, 1, 1, 0), nrow=2, byrow=TRUE)
@@ -52,4 +53,8 @@ b <- c(5, 3)
 
 sol <- linprog(-f, A, b)
 sol$x
+
+}
+\author{
+Ronald Hochreiter, \email{ron@hochreiter.net}
 }

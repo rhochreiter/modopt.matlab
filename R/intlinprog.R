@@ -1,14 +1,17 @@
 #' @title MatLab(R)-style Mixed Integer Linear Programming in R using ROI
 #'
+#' @author Ronald Hochreiter, \email{ron@@hochreiter.net}
+#'
 #' @description
 #' \code{intlinprog} provides a simple interface to ROI using the optimization
 #' model specification of MatLab(R)
 #' 
 #' minimize in x: f'*x
-#' subject to: A*x <= b 
-#' subject to: Aeq*x == beq
-#' x >= lb
-#' x <= ub
+#' subject to
+#'   A*x <= b 
+#'   Aeq*x == beq
+#'   x >= lb
+#'   x <= ub
 #'
 #' @param f Linear term (vector) of the objective function
 #' @param intcon Vector of which variables are integer
@@ -22,20 +25,28 @@
 #' @param options Additional optimization parameters
 #' 
 #' @return The solution vector in \code{x} as well as the objective value
-#' in \code{fval}
+#' in \code{fval}.
+#' 
 #' @export
+#' 
 #' @examples
-#' # maximize: 2*x1 + x2;
-#' # subject to: x1 + x2 <= 5;
-#' # subject to: x1 <= 3;
-#' # x1 >= 0, x2 >= 0
+
+#' # minimize 8x1 + x2
+#' # subject to
+#' #   x1 + 2x2 >= -14
+#' #   -4x1 - 1x2 <= -33
+#' #   2x1 + x2 <= 20
+#' #   x1, x2 integer
 #' 
-#' f <- c(2, 1)
-#' A <- matrix(c(1, 1, 1, 0), nrow=2, byrow=TRUE)
-#' b <- c(5, 3)
+#' f <- c(8, 1)
+#' A <- matrix(c(-1, -2, -4, -1, 2, 1), nrow=3, byrow=TRUE)
+#' b <- c(14, -33, 20)
 #' 
-#' sol <- intlinprog(-f, A, b)
+#' sol <- intlinprog(f, c(1, 2), A, b)
+#' sol <- intlinprog(f, NULL, A, b)
+#' 
 #' sol$x
+#' 
 intlinprog <- function(f, intcon=NULL, A=NULL, b=NULL, Aeq=NULL, beq=NULL, lb=NULL, ub=NULL, x0=NULL, options=NULL) {
   # parse options
   roi_solver <- "glpk"

@@ -30,28 +30,33 @@ quadprog(H, f, A = NULL, b = NULL, Aeq = NULL, beq = NULL, lb = NULL,
 }
 \value{
 The solution vector in \code{x} as well as the objective value
-in \code{fval}
+in \code{fval}.
 }
 \description{
 \code{quadprog} provides a simple interface to ROI using the optimization
 model specification of MatLab(R)
 
 minimize in x: f'*x + 0.5*x'*H*x
-subject to: A*x <= b 
-subject to: Aeq*x == beq
-x >= lb
-x <= ub
+subject to: 
+  A*x <= b 
+  Aeq*x == beq
+  x >= lb
+  x <= ub
 }
 \examples{
-Covariance matrix of four stocks (weekly returns from 2011):
-\\preformatted{
+Covariance "matrix" of four stocks (weekly returns from 2011):
+
 #              AAPL          IBM         MSFT         ORCL
 # AAPL 0.0014708114 0.0006940036 0.0006720841 0.0008276391
 # IBM  0.0006940036 0.0009643581 0.0006239411 0.0011266429
 # MSFT 0.0006720841 0.0006239411 0.0009387707 0.0008728736
 # ORCL 0.0008276391 0.0011266429 0.0008728736 0.0021489512
-}
-covariance = matrix(c(0.0014708114, 0.0006940036, 0.0006720841, 0.0008276391, 0.0006940036, 0.0009643581, 0.0006239411, 0.0011266429, 0.0006720841, 0.0006239411, 0.0009387707, 0.0008728736, 0.0008276391, 0.0011266429, 0.0008728736, 0.0021489512), nrow=4, byrow=TRUE)
+
+covariance = matrix(c(0.0014708114, 0.0006940036, 0.0006720841, 0.0008276391, 
+                      0.0006940036, 0.0009643581, 0.0006239411, 0.0011266429, 
+                      0.0006720841, 0.0006239411, 0.0009387707, 0.0008728736, 
+                      0.0008276391, 0.0011266429, 0.0008728736, 0.0021489512), 
+                      nrow=4, byrow=TRUE)
 assets <- dim(covariance)[1]
 
 H <- covariance
@@ -64,4 +69,8 @@ ub <- rep(1, assets)
 solution <- quadprog(H, f, NULL, NULL, Aeq, beq, lb, ub)
 portfolio <- solution$x
 print(portfolio)
+
+}
+\author{
+Ronald Hochreiter, \email{ron@hochreiter.net}
 }

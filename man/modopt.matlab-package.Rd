@@ -6,7 +6,10 @@
 \alias{modopt.matlab-package}
 \title{MatLab(R)-style Optimization Modeling in R using ROI}
 \description{
-\references{\url{http://www.finance-r.com/}}
+MatLab(R)-style Optimization Modeling in R using ROI
+}
+\references{
+\url{http://www.finance-r.com/}
 }
 \seealso{
 Useful links:
