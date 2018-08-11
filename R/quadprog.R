@@ -30,8 +30,8 @@
 #' @export
 #' 
 #' @examples
-#' Covariance matrix of four stocks (weekly returns from 2011):
-#' 
+#' # Covariance matrix of four stocks (weekly returns from 2011):
+#' #
 #' #              AAPL          IBM         MSFT         ORCL
 #' # AAPL 0.0014708114 0.0006940036 0.0006720841 0.0008276391
 #' # IBM  0.0006940036 0.0009643581 0.0006239411 0.0011266429
