@@ -2,7 +2,7 @@ Package: modopt.matlab
 Type: Package
 Title: 'MatLab'-Style Modeling of Optimization Problems
 Version: 1.0-2
-Date: 2018-08-12
+Date: 2018-08-14
 Authors@R: c(
   person("Ronald", "Hochreiter", email = "ron@hochreiter.net", 
   role = c("aut", "cre")))

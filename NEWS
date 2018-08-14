@@ -1,3 +1,7 @@
+# 180814
+
+- Fixed constraints in quadprog()
+
 # 180812
 
 - Updated README with info about CRAN availability and a short example.
