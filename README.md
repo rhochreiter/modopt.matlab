@@ -6,11 +6,13 @@ Modeling Optimization Problems with R - MatLab compatibility functions. This pac
 
 #### Optimization Problem
 
-| maximize: 2x1 + x2
-| subject to: 
-|   x1 + x2 <= 5
-|   x1 <= 3
-|   x1 >= 0, x2 >= 0
+```
+maximize: 2x1 + x2
+subject to: 
+  x1 + x2 <= 5
+  x1 <= 3
+  x1 >= 0, x2 >= 0
+```
 
 #### Solution
 
