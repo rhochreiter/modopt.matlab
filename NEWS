@@ -1,3 +1,7 @@
+# 180816
+
+- Changed License to MIT (GPL-3 was a mistake)
+
 # 180814
 
 - Fixed constraints in quadprog()
