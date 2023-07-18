@@ -1,6 +1,7 @@
 # 230718
 
 - Fixed the possibility to change solver in quadprog.R
+- Added a test script to show how to change solvers
 
 # 180818
 
