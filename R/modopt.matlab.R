@@ -1,6 +1,6 @@
 #' MatLab(R)-style Optimization Modeling in R using ROI
 #' 
-#' @references \url{http://www.finance-r.com/}
+#' @references \url{http://www.hochreiter.xyz/}
 #' 
 #' @import ROI ROI.plugin.glpk ROI.plugin.quadprog
 #' 

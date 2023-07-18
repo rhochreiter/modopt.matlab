@@ -1,3 +1,7 @@
+# 230718
+
+- Fixed the possibility to change solver in quadprog.R
+
 # 180818
 
 - Version 1.0-2 available at CRAN

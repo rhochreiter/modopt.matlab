@@ -95,7 +95,7 @@ quadprog <- function(H, f, A=NULL, b=NULL, Aeq=NULL, beq=NULL, lb=NULL, ub=NULL,
            L_constraint(L = mat, dir = dir, rhs = rhs),
            bounds = V_bound(li=index, lb=lb, ui=index, ub=ub))
 
-  sol <- ROI_solve(qp, solver = "quadprog")
+  sol <- ROI_solve(qp, solver = roi_solver)
   
   # solution
   result <- list()

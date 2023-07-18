@@ -1,8 +1,8 @@
 Package: modopt.matlab
 Type: Package
 Title: 'MatLab'-Style Modeling of Optimization Problems
-Version: 1.0-3
-Date: 2018-08-19
+Version: 1.0-4
+Date: 2023-07-18
 Authors@R: c(
   person("Ronald", "Hochreiter", email = "ron@hochreiter.net", 
   role = c("aut", "cre")))
@@ -11,5 +11,5 @@ Description: 'MatLab'-Style Modeling of Optimization Problems with 'R'. This pac
 Depends:
     R (>= 3.4), ROI, ROI.plugin.glpk, ROI.plugin.quadprog
 License: MIT + file LICENSE
-URL: http://www.finance-r.com/
+URL: http://www.hochreiter.xyz/
 RoxygenNote: 6.1.0
